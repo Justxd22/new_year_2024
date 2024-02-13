@@ -1,0 +1,842 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@font-face {
+    font-family: 'Barkentina';
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+    src: url("Barkentina.ttf") format('truetype');
+  }
+  
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+  }
+  
+  .preventSelect{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+        -khtml-user-elect: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera */
+	pointer-events: none;
+}
+
+#svg-container {
+    position: absolute;
+    top: 38%;
+    left: 34%;
+    width: 500px;
+    height: 30px;
+    display: none;
+    text-shadow: 0px 0px 40px #fff;
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+}
+
+.uuu {
+    font-family: Barkentina;
+    font-size: 11rem;
+    font-weight: bold;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-dasharray: 565.95;
+    stroke-dashoffset: 565.95;
+    animation: fill 6s ease forwards;
+}
+
+.fadeO {
+	opacity: 0;
+	animation: fadeOUT 3s ease-in-out;
+}
+
+.torr {
+    animation: blurFadeInOut 2s ease-in-out forwards;
+}
+
+.scaleO {
+	opacity: 0;
+	animation: scaleOUT 6s ease-in-out;
+}
+
+@keyframes blurFadeInOut {
+    to{
+        text-shadow: 0px 0px 0px #fff;
+        transform: scale(0);
+    }
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes rr {
+	to {
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeOUT {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes scaleOUT {
+	from {
+		transform: scale(1.8);
+		opacity: 1;
+	}
+	to {
+		transform: scale(8);
+		opacity: 0;
+	}
+}
+
+
+.hiiys{
+    position: absolute;
+    top: 33%;
+    left: 36%;
+    color: #ffff;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: "Barkentina";
+
+}
+.progress {
+    position: absolute;
+    top: 48%;
+    left: 25%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 0 5px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    width: 500px;
+    display: flex;
+    z-index: 999;
+  }
+  
+  .progress-value {
+    animation: load 4s normal forwards;
+    box-shadow: 0px 0px 35px 0px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+  }
+  
+  @keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+  
+  .bg-image {
+    background-image: url("oripat.png");
+    filter: saturate(3000%) hue-rotate(0deg);
+    -webkit-filter: saturate(3000%) hue-rotate(0deg);
+    height: 100%;
+    background-position: center;
+    animation: fade, anim1;
+	animation-duration: 5s, 10s;
+	animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+  }   
+  
+  .bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;  /* Inherit the background image */
+  }
+
+  .bg-image::before {
+    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.25) inset; /* Adjust blur radius and color */
+  }
+
+  @keyframes anim1 {
+	0%{
+        filter: saturate(3000%) hue-rotate(0deg);
+        -webkit-filter: saturate(3000%) hue-rotate(0deg);
+	}
+
+	100% {
+        filter: saturate(3000%) hue-rotate(540deg);
+        -webkit-filter: saturate(3000%) hue-rotate(540deg);
+    }
+}
+
+
+@-webkit-keyframes flash {
+    10% {
+        /* opacity: 0.5; */
+        -webkit-transform: scale(0.5, 0.5);
+        -moz-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+}
+
+@-moz-keyframes flash {
+    10% {
+        /* opacity: 0.5; */
+        -webkit-transform: scale(0.5, 0.5);
+        -moz-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+}
+
+@-ms-keyframes flash {
+    10% {
+        /* opacity: 0.5; */
+        -webkit-transform: scale(0.5, 0.5);
+        -moz-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+}
+
+@keyframes flash {
+    10% {
+        /* opacity: 0.5; */
+        -webkit-transform: scale(0.5, 0.5);
+        -moz-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+}
+ .xmasTree:before {
+	 content: '⭐';
+	 color: #f5cd2d;
+	 position: absolute;
+	 display: block;
+	 font-size: 60px;
+	 line-height: 60px;
+	 top: 10px;
+	 left: -33px;
+	 -webkit-animation: flash 1s ease infinite forwards;
+	 -moz-animation: flash 1s ease infinite forwards;
+	 -ms-animation: flash 1s ease infinite forwards;
+	 animation: flash 1s ease infinite forwards;
+}
+.xmasTree {
+    -webkit-animation: xmasTree 1s linear infinite forwards;
+    -moz-animation: xmasTree 1s linear infinite forwards;
+    -ms-animation: xmasTree 1s linear infinite forwards;
+    animation: xmasTree 1s linear infinite forwards;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: scale(2.2);
+    box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+}
+
+@-webkit-keyframes xmasTree {
+    25% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #649632, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #649632, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #649632, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    50% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #649632, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #649632, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #649632, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    75% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #649632, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #649632, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #649632, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    100% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+}
+
+@-moz-keyframes xmasTree {
+    25% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #649632, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #649632, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #649632, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    50% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #649632, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #649632, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #649632, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    75% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #649632, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #649632, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #649632, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    100% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+}
+
+@-ms-keyframes xmasTree {
+    25% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #649632, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #649632, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #649632, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    50% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #649632, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #649632, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #649632, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    75% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #649632, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #649632, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #649632, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    100% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+}
+
+@keyframes xmasTree {
+    25% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #649632, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #649632, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #649632, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    50% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #649632, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #649632, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #649632, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    75% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #649632, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #649632, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #649632, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+
+    100% {
+        box-shadow: 0 3em 0 0 #4b4b4b, 1em 4em 0 0 #4b4b4b, 0 4em 0 0 #649632, -1em 4em 0 0 #4b4b4b, -2em 5em 0 0 #4b4b4b, -1em 5em 0 0 #96cbcf, 0 5em 0 0 #649632, 1em 5em 0 0 #649632, 2em 5em 0 0 #4b4b4b, 3em 6em 0 0 #4b4b4b, 2em 6em 0 0 #649632, 1em 6em 0 0 #eb0000, 0 6em 0 0 #649632, -1em 6em 0 0 #649632, -2em 6em 0 0 #649632, -3em 6em 0 0 #4b4b4b, -2em 7em 0 0 #4b4b4b, -1em 7em 0 0 #649632, 0 7em 0 0 #2d8434, 1em 7em 0 0 #649632, 2em 7em 0 0 #4b4b4b, 3em 8em 0 0 #4b4b4b, 2em 8em 0 0 #649632, 1em 8em 0 0 #2d8434, 0 8em 0 0 #649632, -1em 8em 0 0 #2d8434, -2em 8em 0 0 #649632, -3em 8em 0 0 #4b4b4b, -4em 9em 0 0 #4b4b4b, -3em 9em 0 0 #649632, -2em 9em 0 0 #eb0000, -1em 9em 0 0 #649632, 0 9em 0 0 #d8ba00, 1em 9em 0 0 #649632, 2em 9em 0 0 #96cbcf, 3em 9em 0 0 #649632, 4em 9em 0 0 #4b4b4b, 3em 10em 0 0 #4b4b4b, 2em 10em 0 0 #649632, 1em 10em 0 0 #2d8434, 0 10em 0 0 #649632, -1em 10em 0 0 #2d8434, -2em 10em 0 0 #649632, -3em 10em 0 0 #4b4b4b, -4em 11em 0 0 #4b4b4b, -3em 11em 0 0 #649632, -2em 11em 0 0 #2d8434, -1em 11em 0 0 #649632, 0 11em 0 0 #2d8434, 1em 11em 0 0 #649632, 2em 11em 0 0 #2d8434, 3em 11em 0 0 #d8ba00, 4em 11em 0 0 #4b4b4b, 5em 12em 0 0 #4b4b4b, 4em 12em 0 0 #649632, 3em 12em 0 0 #649632, 2em 12em 0 0 #649632, 1em 12em 0 0 #649632, 0 12em 0 0 #649632, -1em 12em 0 0 #649632, -2em 12em 0 0 #649632, -3em 12em 0 0 #649632, -4em 12em 0 0 #649632, -5em 12em 0 0 #4b4b4b, -4em 13em 0 0 #4b4b4b, -3em 13em 0 0 #d8ba00, -2em 13em 0 0 #649632, -1em 13em 0 0 #96cbcf, 0 13em 0 0 #649632, 1em 13em 0 0 #649632, 2em 13em 0 0 #eb0000, 3em 13em 0 0 #649632, 4em 13em 0 0 #4b4b4b, 3em 14em 0 0 #4b4b4b, 2em 14em 0 0 #4b4b4b, 1em 14em 0 0 #4b4b4b, 0 14em 0 0 #aa782c, -1em 14em 0 0 #4b4b4b, -2em 14em 0 0 #4b4b4b, -3em 14em 0 0 #4b4b4b, -1em 15em 0 0 #4b4b4b, 0 15em 0 0 #4b4b4b, 1em 15em 0 0 #4b4b4b;
+    }
+}
+
+#svg2{
+    width: 380px;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    margin-left: -190px;
+    transform: scale(1.5);
+    filter: drop-shadow(0px 0px 1px #ce80ff) drop-shadow(0px 0px 4px #ce80ff)
+  }
+  
+  #HNY{
+    animation: txtanimg 10s -1s infinite;
+  }
+  #HNY path{
+    stroke-width:3;
+    stroke: inherit;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke: #ce80ff;
+    stroke-miterlimit: 3;
+    fill: none;
+    transform: inherit;
+    stroke-dasharray: 0, 100000;
+    animation-fill-mode: none;
+    animation: txtanim 1s infinite;
+  }
+  
+  path#t1{animation-delay: 0.0s;}
+  path#t2{animation-delay: 1.4s;}
+  path#t3{animation-delay: 1.8s;}
+  path#t4{animation-delay: 2s;}
+  
+  @keyframes txtanim {
+    100%{stroke-dasharray: 940, 100000; }
+  }
+
+  .bttn{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: Barkentina;
+    position: absolute;
+    background-color: #4ac0cc;
+    left: 36%;
+    border-radius: 24px;
+    top: 56%;
+    padding: 33px;
+    color: #333333;
+    transition: background-color 0.3s ease;
+    pointer-events: all;
+    box-shadow: 0px 0px 63px 4px #4ac0cc;
+    animation: fade 5s ease-in-out forwards;
+  }
+  .btn-primary {
+    border-color: #ff0154;;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: Barkentina;
+    font-weight: 700;
+    color: #ffeb00;
+    background-color: #33aebb;
+    
+}
+
+.centered-footer {
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4%;
+  top: 90%;
+  color: #888;
+  font-size: 3rem;
+  font-family: 'Barkentina';
+  background: #00000070;
+  pointer-events: all;
+}
+
+.author-name {
+  color: #d4d3d3;
+  font-size: 4rem;
+}
+
+.bttn:hover,
+.bttn:focus,
+.bttn:active,
+.bttn.active {
+  color: #fff;
+  background-color: #466baf;
+}
+  
+  @keyframes txtanimg {
+    0%    { opacity: 1 }
+    68%   {opacity: 1 }
+    71%   {opacity: 0 }
+    100%  {opacity: 0 }
+  }
+
+  .ny {
+    /*width: 380px; */
+    position: absolute;
+    top: 20%;
+    left: 36%;
+    margin-left: -190px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: rgb(0, 255, 247);
+    animation: bounce 2s infinite;
+    text-shadow: 3px 3px 10px #fff;
+    font-family: "Bungee Shade";
+    font-size: 4em;
+    /* margin-block-start: 0.67em; */
+    /* margin-inline-end: 0px; */
+    font-weight: bold;
+  }
+
+  .new-bb {
+    /*width: 380px; */
+    position: absolute;
+    top: 37%;
+    left: 36%;
+    margin-left: -190px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #ce80ff;
+    font-family:'Pacifico', cursive;
+    text-shadow: 0 0 5px #ff00aa, 0 0 25px #ff00aa, 0 0 50px #ff00aa;
+    font-size: 4em;
+    /* animation: changeTextShadow 6s ease-in-out infinite alternate; */
+    font-weight: bold;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+
+
+  .new-year {
+    /*width: 450px; */
+    position: absolute;
+    top: 55%;
+    left: 44%;
+    margin-left: -230px;
+    color: white;
+    text-align: center;
+    /* font-size: 1rem; */
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    text-shadow: 0 0 25px white, 0 0 50px white, 0 0 100px white;
+    font-family: "Megrim", cursive;
+    font-size: 4rem;
+    /* margin-block-start: 0.67em; */
+    /* margin-inline-end: 0px; */
+    font-weight: bold;
+    animation: changeTextShadow 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes changeTextShadow {
+    0% {
+      text-shadow: 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+    }
+    20% {
+      text-shadow: 0 0 5px #1fd224, 0 0 25px #1fd224, 0 0 50px #1fd224,
+        0 0 100px #1fd224, 0 0 200px #1fd224;
+    }
+    40% {
+      text-shadow: 0 0 5px #ffaa01, 0 0 25px #ffaa01, 0 0 50px #ffaa01,
+        0 0 100px #ffaa01, 0 0 200px #ffaa01;
+    }
+    60% {
+      text-shadow: 0 0 5px #ff00aa, 0 0 25px #ff00aa, 0 0 50px #ff00aa,
+        0 0 100px #ff00aa, 0 0 200px #ff00aa;
+    }
+    80% {
+      text-shadow: 0 0 5px #aa00ff, 0 0 25px #aa00ff, 0 0 50px #aa00ff,
+        0 0 100px #aa00ff, 0 0 200px #aa00ff;
+    }
+    100% {
+      text-shadow: 0 0 5px #00aaff, 0 0 25px #00aaff, 0 0 50px #00aaff,
+        0 0 100px #00aaff, 0 0 200px #00aaff;
+    }
+  }
+
+
+  .balao{
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #eeff00;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -165px;
+    right: 0%;
+    margin-right: -261px;
+    filter: drop-shadow(0px 0px 32px #eeff00);
+    -webkit-animation: vem_e_vai_balao 10s ease-in-out forwards;
+            animation: vem_e_vai_balao 10s ease-in-out forwards;
+  }
+  .balao:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #b19b32 transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -10px;
+    z-index: -1;
+  }
+  .balao:after{
+    content: '';
+    width: 4px;
+    height: 100px;
+    display: block;
+    background: #fff;
+    border-radius: 0px 0px 3px 3px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: -110px;
+  }
+
+  @-webkit-keyframes vem_e_vai_balao {
+    0% {
+      right: 0%;
+      top: 57%;
+    }
+    40% {
+      right: 50%;
+      top: 57%;
+    }
+    50% {
+      right: 50%;
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+      right: 50%;
+    }
+  }
+  @keyframes vem_e_vai_balao {
+    0% {
+      right: 0%;
+      top: 57%;
+    }
+    40% {
+      right: 50%;
+      top: 57%;
+    }
+    50% {
+      right: 50%;
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+      right: 50%;
+    }
+  }
+
+  .twenything{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 200px 100px 0px 0px;
+    text-shadow: 0px 0px 80px #35f3ff;
+    animation: fade 5s ease-in-out 1 normal;
+  }
+  .twenything>span{
+    font-family: fantasy;
+    font-size: 14rem;
+    letter-spacing: -5px;
+    font-weight: 700;
+    color: #35f3ff;
+  }
+  span.sete{
+    position: absolute;
+    right: 0%;
+    margin-right: -261px;
+    -webkit-animation: vem_2017 6s ease-in-out forwards;
+            animation: vem_2017 6s ease-in-out forwards;
+  }
+  span.sete:before{
+    content: '';
+    width: 0px;
+    height: 6px;
+    display: block;
+    border-radius: 3px;
+    background: #7a8fe8;
+    transform: rotate(0deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 55px;
+    left: 10px;
+    z-index: -1;
+  }
+  span.seis{
+    position: absolute;
+    right: 50%;
+    margin-right: -261px;
+    -webkit-animation: vai_2016 5s ease-in-out 5s forwards;
+            animation: vai_2016 5s ease-in-out 5s forwards;
+  }
+
+  @-webkit-keyframes entrega_balao {
+    0% {
+      transform: rotate(-30deg);
+      width: 40px;
+    }
+    100% {
+      transform: rotate(-150deg);
+      width: 70px;
+    }
+  }
+  @keyframes entrega_balao {
+    0% {
+      transform: rotate(-30deg);
+      width: 40px;
+    }
+    100% {
+      transform: rotate(-150deg);
+      width: 70px;
+    }
+  }
+  @-webkit-keyframes vai_2016 {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+    }
+  }
+  @keyframes vai_2016 {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+    }
+  }
+
+  @-webkit-keyframes vem_2017 {
+    0% {
+      right: 0%;
+      top: 57%;
+    }
+    66.6666% {
+      right: 50%;
+      top: 57%;
+    }
+    85% {
+      top: 57%;
+      right: 50%;
+    }
+    100% {
+      right: 50%;
+      top: 49%;
+    }
+  }
+  
+  @keyframes vem_2017 {
+    0% {
+      right: 0%;
+      top: 57%;
+    }
+    66.6666% {
+      right: 50%;
+      top: 57%;
+    }
+    85% {
+      top: 57%;
+      right: 50%;
+    }
+    100% {
+      right: 50%;
+      top: 49%;
+    }
+  }
+
+
+  .i01 {
+    opacity: 0;
+  }
+ .i02 {
+  opacity: 1;
+
+  }
+  
+ .i03 {
+  opacity: .5;
+
+  }
+  
+ .i04 {
+  opacity: .7;
+
+  }
+
+  @-webkit-keyframes fade-in-item {
+    0%   { opacity: 0.1;  }
+    30% { opacity: .4; }
+    60% { opacity: .7; }
+    100% { opacity: 1; } 
+  }
+  @keyframes fade-in-item {
+    0%   { opacity: 0.1;  }
+    30% { opacity: .4; }
+    60% { opacity: .7; }
+    100% { opacity: 1; } 
+  }
+
+  .globe{
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    transform: scale(0.8);
+  }
+  .g1{
+    top: 34%;
+    left: 23%;
+  }
+  .g2{
+    top: 24%;
+    left: 9%;
+  }
+  .g3{
+    top: 31%;
+    left: 17%;
+  }
+  .g4{
+    top: 40%;
+    left: 36%;
+    transform: scale(2.4)
+  }
+  .g6{
+    top: 31%;
+    left: 23%;
+    transform: scale(1.2);
+  }
+  .g7{
+    top: 31%;
+    left: 23%;
+    transform: scale(1.2);
+    background: #a27c00;
+  }
+
+  .g8{
+    top: 31%;
+    left: 32%;
+    transform: scale(1.2);
+  }
+
+  .bbafin{
+    position: absolute;
+    top: 16%;
+    left: 31%;
+    color: #ffff;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: "Barkentina";
+    animation: fade 5s ease-in-out forwards;
+  }
+
+  .fi2{
+    top: 33%;
+    left: 14%;
+    font-size: 4rem;
+  }
+  .fi3{
+    top: 42%;
+  }
+
+  .b1{
+    left: 31%;
+    top: 61%;
+  }
+  .b2{
+    left: 36%;
+    top: 74%;
+  }

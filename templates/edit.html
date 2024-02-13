@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="user-scalable=no">
+
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}"  type="image/x-icon">
+<meta name="referrer" content="default" id="meta_referrer">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Happy New YEAR!!!!!">
+<meta property="og:site_name" content="Happy New YEAR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy New YEAR!!!">
+<meta property="og:description" content="Happy New YEAR!!!!!">
+
+<title>New YEAR BBY :)</title>
+
+<link href="{{ url_for('static', filename='style/ny.css') }}" rel="stylesheet">
+<style>
+    .hff{
+        top: 33%;
+    left: 17%;
+    }
+    .hffd{
+        top: 69%;
+    left: 17%;
+    background: #00000070;
+    }
+
+    input[type=text]{
+        width: 73%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 19px;
+    box-sizing: border-box;
+    transition: .3s;
+    position: absolute;
+    left: 14%;
+    top: 46%;
+    font-size: 3rem;
+    filter: drop-shadow(0px 0px 40px #fff);
+
+  }
+  
+  input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+  .nnm{
+    left: 30%;
+  }
+
+</style>
+</head>
+
+<body>
+    <div id="bg" class="bg-image" style="z-index: -1000;"></div>
+    <div id="hii" class="hiiys hff">Enter your Friend Name :3</div>
+    <input id="inputBox" type="text" maxlength="6" placeholder="Friend Name (max 6 letters)" oninput="enableSaveButton()">
+    <button id="btt" class="bttn nnm" style="display: none;">COPY LINK</button>
+    <footer id="foot" class="centered-footer">
+        <a href="https://github.com/justxd22" style="
+     text-decoration: none;
+     color: unset;
+ ">Created by <span class="author-name">.xd22</span></a> 
+       </footer>
+
+       <a id="link" class="hiiys hffd"></a>
+
+<script>
+    var nameFF= "nabi🦋";
+
+    function enableSaveButton() {
+      var inputValue = document.getElementById('inputBox').value;
+      if (inputValue.length > 2){
+          var bb = document.getElementById('btt');
+          bb.style.display = "block";
+          bb.addEventListener('click', function() { ee() });
+          
+      }
+    }
+
+    function copyToClipboard(text) {
+  if (!navigator.clipboard) {
+    // Fallback for older browsers
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    
+try {
+      document.execCommand("copy");
+      alert("Link copied to clipboard!");
+    } catch (err) {
+      console.error("Unable to copy link:", err);
+    }
+    document.body.removeChild(textArea);
+  } else {
+    // Modern browsers
+    navigator.clipboard.writeText(text)
+      .then(() => alert("Link copied to clipboard!"))
+      .catch(err => console.error("Unable to copy link:", err));
+  }
+}
+
+    function ee(){
+        var inputValue = document.getElementById('inputBox').value;
+        var ii = document.getElementById('link');
+        var link = `${window.location.origin}/${inputValue}`
+
+        ii.setAttribute('href', link);
+        ii.innerText = link;
+        copyToClipboard(link);
+        alert('Share link to your friend (copy)' + link);
+    }
+</script>
+</body>
+</html>
